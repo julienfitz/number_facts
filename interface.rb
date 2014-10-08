@@ -11,12 +11,10 @@ class NumberFinder
 
   def get_num_fact(doc,num)
     File.readlines(doc).each do |line|
-      if line == num
-        puts "#{line}"
-        puts "I hope you've enjoyed learning more about your favorite number!"
-      else
-        puts "Sorry! No information was found for your number."
-      end
+      # if line == num
+        puts line
+        # puts "I hope you've enjoyed learning more about your favorite number!"
+      # end
     end
   end
 end
