@@ -6,18 +6,21 @@ class NumberFinder
     puts "Enter your favorite number: "
     number = gets.chomp
     #binding.pry
-    get_num_fact("./numbers.txt",number)
+    get_num_fact("numbers.txt",number)
   end
 
   def get_num_fact(doc,num)
     File.readlines(doc).each do |line|
-      match_num(line)
+      match_num(line,num)
     end
   end
 
-  def match_num(line)
-    number_array =["1","2","3","4","5","6","7","8","9","0"]
-    if line[0] == number_array[0] && line[1] == " "
+  def match_num(line, num)
+    if line[0] == num[0] && line[1]== " "
+      puts line
+    elsif line[0] == num[0] && line[1] == num[1] && line[2] == " "
+      puts line
+    elsif line[0] == num[0] && line[1] == num[1] && line[2] == num[2] && line[3] == " "
       puts line
     end
   end
