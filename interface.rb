@@ -1,18 +1,19 @@
+require 'pry'
+
 class NumberFinder
 
   def initialize
     puts "Enter your favorite number: "
     number = gets.chomp
-    get_num_fact("numbers.txt",number)
+    #binding.pry
+    get_num_fact("numbers",number)
   end
 
   def get_num_fact(doc,num)
-    line_num=0
-    text=File.open(doc).read
-    text.gsub!(/\r\n?/, "\n")
-    text.each_line do |line|
+    File.readlines(doc).each do |line|
       if line == num
         puts "#{line}"
+        puts "I hope you've enjoyed learning more about your favorite number!"
       end
     end
   end
