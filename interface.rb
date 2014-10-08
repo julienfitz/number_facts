@@ -17,17 +17,11 @@ class NumberFinder
 
   def match_num(line)
     number_array =["1","2","3","4","5","6","7","8","9","0"]
-    if number_array.include?(line[0])
-      if number_array.include?(line[1])
-        if number_array.include?(line[2])
-          if number_array.include?(line[3])
-            puts line
-          end
-        end
-      end
+    if line[0] == number_array[0]
+      puts line
     end
   end
-  
+
 end
 
 NumberFinder.new
