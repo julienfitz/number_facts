@@ -6,7 +6,7 @@ class NumberFinder
     puts "Enter your favorite number: "
     number = gets.chomp
     #binding.pry
-    get_num_fact("numbers",number)
+    get_num_fact("./numbers.txt",number)
   end
 
   def get_num_fact(doc,num)
@@ -14,6 +14,8 @@ class NumberFinder
       if line == num
         puts "#{line}"
         puts "I hope you've enjoyed learning more about your favorite number!"
+      else
+        puts "Sorry! No information was found for your number."
       end
     end
   end
