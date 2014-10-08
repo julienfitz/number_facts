@@ -17,7 +17,7 @@ class NumberFinder
 
   def match_num(line)
     number_array =["1","2","3","4","5","6","7","8","9","0"]
-    if line[0] == number_array[0]
+    if line[0] == number_array[0] && line[1] == " "
       puts line
     end
   end
