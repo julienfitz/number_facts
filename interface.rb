@@ -29,6 +29,7 @@ class NumberFinder
         puts line
         puts "I hope you enjoyed learning more about your favorite number!"
       end
+      #need to iterate over every number between 1 and 9999 and match to input
     end
   end
 
