@@ -11,12 +11,23 @@ class NumberFinder
 
   def get_num_fact(doc,num)
     File.readlines(doc).each do |line|
-      # if line == num
-        puts line
-        # puts "I hope you've enjoyed learning more about your favorite number!"
-      # end
+      match_num(line)
     end
   end
+
+  def match_num(line)
+    number_array =["1","2","3","4","5","6","7","8","9","0"]
+    if number_array.include?(line[0])
+      if number_array.include?(line[1])
+        if number_array.include?(line[2])
+          if number_array.include?(line[3])
+            puts line
+          end
+        end
+      end
+    end
+  end
+  
 end
 
 NumberFinder.new
