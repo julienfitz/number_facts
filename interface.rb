@@ -16,12 +16,18 @@ class NumberFinder
   end
 
   def match_num(line, num)
-    if line[0] == num[0] && line[1]== " "
-      puts line
-    elsif line[0] == num[0] && line[1] == num[1] && line[2] == " "
-      puts line
-    elsif line[0] == num[0] && line[1] == num[1] && line[2] == num[2] && line[3] == " "
-      puts line
+    if line[0] == num[0] && line[1]== num[1]
+      if line[0] == num[0] && line[1] == " "
+        puts line
+      end
+    elsif line[0] == num[0] && line[1] == num[1] && line[2] == num[2]
+      if line[0] == num[0] && line[1] == num[1] && line[2] == " "
+        puts line
+      end
+    elsif line[0] == num[0] && line[1] == num[1] && line[2] == num[2] && line[3] == num[3]
+      if line[0] == num[0] && line[1] == num[1] && line[2] == num[2] && line[3] == " "
+        puts line
+      end
     end
   end
 
